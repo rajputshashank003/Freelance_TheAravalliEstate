@@ -1,4 +1,5 @@
 import PageLayout from '../../common/PageLayout/PageLayout'
+import BrandBanner from './components/BrandBanner'
 import HeroSection from './components/HeroSection'
 import TrustStrip from './components/TrustStrip'
 import PromiseSection from './components/PromiseSection'
@@ -13,6 +14,7 @@ import useHome from './useHome'
 function HomeComp() {
     return (
         <PageLayout>
+            <BrandBanner />
             <HeroSection />
             <TrustStrip />
             <PromiseSection />

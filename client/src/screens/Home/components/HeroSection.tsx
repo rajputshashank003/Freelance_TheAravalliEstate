@@ -9,7 +9,7 @@ const EASE_OUT: [number, number, number, number] = [0.22, 1, 0.36, 1]
 export default function HeroSection() {
     return (
         <section className="relative overflow-hidden">
-            <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 pt-10 pb-14 sm:px-6 sm:pt-14 lg:grid-cols-[1.05fr_1fr] lg:gap-14 lg:px-8 lg:pt-20 lg:pb-24">
+            <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 pt-4 pb-14 sm:px-6 sm:pt-6 lg:grid-cols-[1.05fr_1fr] lg:items-start lg:gap-14 lg:px-8 lg:pt-6 lg:pb-24">
                 <motion.div
                     initial={{ opacity: 0, y: 16 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -18,9 +18,9 @@ export default function HeroSection() {
                     <p className="text-xs font-semibold tracking-[0.18em] text-gold-text uppercase">
                         Property advisors · {COMPANY.AREAS_SERVED}
                     </p>
-                    <h1 className="mt-4 font-display text-[42px] leading-[1.04] font-medium tracking-tight text-balance text-ink sm:text-6xl lg:text-[68px]">
+                    <h2 className="mt-4 font-display text-[42px] leading-[1.04] font-medium tracking-tight text-balance text-ink sm:text-6xl lg:text-[68px]">
                         Property advice that stays honest after the deal closes.
-                    </h1>
+                    </h2>
                     <p className="mt-6 max-w-xl text-lg leading-relaxed text-pretty text-ink-soft">
                         Buy, sell, rent or invest across Gurgaon, Delhi and Haryana with advisors who work on a transparent commission and a simple promise — your benefit comes first.
                     </p>
