@@ -53,10 +53,11 @@ export default function Header() {
 
     return (
         <header className="sticky top-0 z-40">
-            <div className="hidden bg-ink-deep bg-(image:--gradient-ink) text-[13px] text-on-dark-soft lg:block">
-                <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-8 py-2">
+            {/* Below desktop only hours and phone fit, so address and email are hidden there */}
+            <div className="bg-ink-deep bg-(image:--gradient-ink) text-[12px] whitespace-nowrap text-on-dark-soft sm:text-[13px]">
+                <div className="mx-auto flex h-9 max-w-7xl items-center justify-between gap-3 px-4 sm:px-6 lg:gap-6 lg:px-8">
                     <p className="flex items-center gap-5">
-                        <span className="flex items-center gap-1.5">
+                        <span className="hidden items-center gap-1.5 lg:flex">
                             <MapPin size={14} className="text-gold" aria-hidden="true" />
                             {COMPANY.ADDRESS_LINES.join(', ')}
                         </span>
@@ -66,11 +67,11 @@ export default function Header() {
                         </span>
                     </p>
                     <p className="flex items-center gap-5">
-                        <a href={buildMailUrl(COMPANY.EMAILS[0])} className="flex items-center gap-1.5 transition-colors hover:text-on-dark">
+                        <a href={buildMailUrl(COMPANY.EMAILS[0])} className="hidden items-center gap-1.5 transition-colors hover:text-on-dark lg:flex">
                             <Mail size={14} className="text-gold" aria-hidden="true" />
                             {COMPANY.EMAILS[0]}
                         </a>
-                        <a href={buildTelUrl()} className="flex items-center gap-1.5 transition-colors hover:text-on-dark">
+                        <a href={buildTelUrl()} className="flex h-9 items-center gap-1.5 text-on-dark transition-colors hover:text-gold lg:text-on-dark-soft lg:hover:text-on-dark">
                             <Phone size={14} className="text-gold" aria-hidden="true" />
                             {CONTACT.CALL_DISPLAY}
                         </a>
@@ -117,7 +118,7 @@ export default function Header() {
                         <motion.nav
                             id="mobile-menu"
                             aria-label="Mobile"
-                            className="absolute inset-x-0 top-full max-h-[calc(100svh-64px)] overflow-y-auto border-y border-line bg-cream shadow-[0_16px_30px_-16px_rgba(26,23,18,0.35)] lg:hidden"
+                            className="absolute inset-x-0 top-full max-h-[calc(100svh-100px)] sm:max-h-[calc(100svh-108px)] overflow-y-auto border-y border-line bg-cream shadow-[0_16px_30px_-16px_rgba(26,23,18,0.35)] lg:hidden"
                             initial={{ opacity: 0, y: -8 }}
                             animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0, y: -8 }}

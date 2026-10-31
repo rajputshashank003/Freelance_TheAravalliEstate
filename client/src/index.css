@@ -55,10 +55,11 @@ body {
 }
 
 /* Keeps anchored sections clear of the sticky header */
+/* Header = 36px top bar + 64px bar (72px from sm up), plus a small breathing gap */
 section[id] {
-    scroll-margin-top: 72px;
+    scroll-margin-top: 104px;
 
-    @media (min-width: 1024px) {
+    @media (min-width: 640px) {
         scroll-margin-top: 112px;
     }
 }
